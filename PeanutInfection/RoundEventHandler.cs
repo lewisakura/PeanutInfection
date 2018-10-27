@@ -1,5 +1,4 @@
 ﻿using Smod2.EventHandlers;
-using Smod2.Events;
 using Smod2.EventSystem.Events;
 
 namespace PeanutInfection
