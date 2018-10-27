@@ -6,7 +6,7 @@ namespace PeanutInfection
     [PluginDetails(
         author = "LewisTehMinerz",
         name = "Peanut Infection",
-        description = "One peanut, loads of people.",
+        description = "Standard SCP:SL, except for the fact that Peanut is infecting everyone!",
         id = "centurion.gamemode.peanutinfection",
         version = "1.0.0",
         SmodMajor = 3,
@@ -28,7 +28,7 @@ namespace PeanutInfection
         public override void Register()
         {
             AddEventHandlers(new EventHandler(this));
-            GamemodeManager.GamemodeManager.RegisterMode(this, "01111111111111111111");
+            GamemodeManager.GamemodeManager.RegisterMode(this, "-1");
         }
     }
 }
