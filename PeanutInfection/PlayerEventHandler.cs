@@ -13,14 +13,14 @@ namespace PeanutInfection
             {
                 if (ev.Killer.TeamRole.Role == Role.SCP_173)
                 {
-                    ev.SpawnRagdoll = false;
+                    ev.SpawnRagdoll = plugin.GetConfigBool("peanut_infection_spawn_corpses");
                     var deathPos = ev.Player.GetPosition();
 
                     var respawnTimer = new Timer
                     {
                         AutoReset = false,
                         Enabled = true,
-                        Interval = 1000
+                        Interval = plugin.GetConfigFloat("peanut_infection_respawn_time") * 1000
                     };
 
                     respawnTimer.Elapsed += delegate

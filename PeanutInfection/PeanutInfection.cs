@@ -1,5 +1,6 @@
 ﻿using Smod2;
 using Smod2.Attributes;
+using Smod2.Config;
 
 namespace PeanutInfection
 {
@@ -27,6 +28,8 @@ namespace PeanutInfection
 
         public override void Register()
         {
+            AddConfig(new ConfigSetting("peanut_infection_respawn_time", 1, SettingType.FLOAT, true, "The amount of time it takes for a victim of Peanut to respawn as Peanut, in seconds. This is a float, so you can use decimals."));
+            AddConfig(new ConfigSetting("peanut_infection_spawn_corpses", false, SettingType.BOOL, true, "Whether or not to spawn corpses. Only takes effect if the victim was killed by a Peanut."));
             AddEventHandlers(new EventHandler(this));
             GamemodeManager.GamemodeManager.RegisterMode(this, "-1");
         }
